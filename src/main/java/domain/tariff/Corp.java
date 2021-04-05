@@ -1,22 +1,12 @@
 package domain.tariff;
 
-import domain.user.Blocking;
-import domain.user.User;
-
-import java.io.Serializable;
-
-public class Corp extends Tariff implements Blocking {
+public class Corp extends Tariff {
 
     private boolean conferenceCall;
+    private TariffCorpEnum name;
 
-
-    @Override
-    public void block(User user) {
-
-    }
-
-    @Override
-    public void unblock(User user) {
-
+    public Corp (TariffCorpEnum name, int coast, int tariffId, boolean conferenceCall) {
+        super(coast, tariffId);
+        this.conferenceCall = conferenceCall;
     }
 }

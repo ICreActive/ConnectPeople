@@ -1,5 +1,7 @@
 package domain.user;
 
+import domain.service.Blocking;
+
 public class Admin implements Blocking {
 
     @Override

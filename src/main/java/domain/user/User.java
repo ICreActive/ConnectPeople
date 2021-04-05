@@ -1,16 +1,17 @@
 package domain.user;
 
+import domain.tariff.TariffCorpEnum;
+
 import java.io.Serializable;
 
 public abstract class User implements Serializable {
 
     private String name;
 
-
     protected User() {
 
     }
-    protected User(String name) {
+    protected User (String name) {
         this.name = name;
     }
 

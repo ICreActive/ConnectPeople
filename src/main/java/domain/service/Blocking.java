@@ -1,4 +1,6 @@
-package domain.user;
+package domain.service;
+
+import domain.user.User;
 
 public interface Blocking {
 

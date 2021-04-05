@@ -1,5 +1,5 @@
 package domain.tariff;
 
-public enum tariffEnum {
+public enum TariffCorpEnum {
     OPTIMAL, STANDARD, EXTRA
 }
