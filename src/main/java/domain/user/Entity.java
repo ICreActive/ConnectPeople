@@ -1,27 +1,17 @@
 package domain.user;
 
-import domain.service.Blocking;
-import domain.tariff.TariffCorpEnum;
+import domain.tariff.Tariff;
 
 public class Entity extends User {
 
     private int VatID;
+    private Tariff tariff;
 
-    public Entity(String name, int VatID, TariffCorpEnum tariff) {
+    public Entity(String name, int VatID, Tariff tariff) {
         super.setName(name);
-        this.setTariff(tariff);
-        this.VatID=VatID;
-    }
-
-    public TariffCorpEnum getTariff() {
-        return tariff;
-    }
-
-    public void setTariff(TariffCorpEnum tariff) {
         this.tariff = tariff;
+        this.VatID = VatID;
     }
-
-    private TariffCorpEnum tariff;
 
     public int getVatID() {
         return VatID;
@@ -31,10 +21,9 @@ public class Entity extends User {
         VatID = vatID;
     }
 
-
     @Override
     public String toString() {
         return "Entity: " + getName() + " with " +
-                "VatID = " + getVatID() + ", Tariff = " + getTariff();
+                "VatID = " + getVatID() + ", Tariff - " + tariff.getName();
     }
 }
